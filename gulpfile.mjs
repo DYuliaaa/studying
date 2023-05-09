@@ -1,9 +1,16 @@
 import gulp from "gulp";
+<<<<<<< HEAD
 
 import del from "del";
 import include from "gulp-file-include";
 import formatHtml from "gulp-format-html";
 
+=======
+import del from "del";
+
+import include from "gulp-file-include";
+import formatHtml from "gulp-format-html";
+>>>>>>> main
 import less from "gulp-less";
 import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
@@ -11,7 +18,10 @@ import autoprefixer from "autoprefixer";
 import sortMediaQueries from "postcss-sort-media-queries";
 import minify from "gulp-csso";
 import rename from "gulp-rename";
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 import terser from "gulp-terser";
 
 import imagemin from "gulp-imagemin";
@@ -21,7 +31,10 @@ import imagemin_optipng from "imagemin-optipng";
 
 import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 import server from "browser-sync";
 
 const resources = {
@@ -41,6 +54,7 @@ const resources = {
     "src/php/**/*.php"
   ]
 };
+<<<<<<< HEAD
 
 
 
@@ -48,6 +62,12 @@ function clean() {
   return del("dist");
 }
 
+=======
+// Gulp Tasks:
+function clean() {
+  return del("dist");
+}
+>>>>>>> main
 function includeHtml() {
   return gulp
     .src("src/html/*.html")
@@ -61,7 +81,10 @@ function includeHtml() {
     .pipe(formatHtml())
     .pipe(gulp.dest("dist"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function style() {
   return gulp
     .src("src/styles/styles.less")
@@ -80,7 +103,10 @@ function style() {
     .pipe(rename("styles.min.css"))
     .pipe(gulp.dest("dist/styles"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function js() {
   return gulp
     .src("src/scripts/dev/*.js")
@@ -100,14 +126,20 @@ function js() {
     )
     .pipe(gulp.dest("dist/scripts"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function jsCopy() {
   return gulp
     .src(resources.jsVendor)
     .pipe(plumber())
     .pipe(gulp.dest("dist/scripts"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function copy() {
   return gulp
     .src(resources.static, {
@@ -115,7 +147,10 @@ function copy() {
     })
     .pipe(gulp.dest("dist/"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function images() {
   return gulp
     .src(resources.images)
@@ -128,7 +163,10 @@ function images() {
     )
     .pipe(gulp.dest("dist/assets/images"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function svgSprite() {
   return gulp
     .src(resources.svgSprite)
@@ -147,7 +185,10 @@ function svgSprite() {
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("dist/assets/icons"));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 const build = gulp.series(
   clean,
   copy,
@@ -158,12 +199,18 @@ const build = gulp.series(
   images,
   svgSprite
 );
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function reloadServer(done) {
   server.reload();
   done();
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function serve() {
   server.init({
     server: "dist"
@@ -176,9 +223,13 @@ function serve() {
   gulp.watch(resources.images, { delay: 500 }, gulp.series(images, reloadServer));
   gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
 }
+<<<<<<< HEAD
 
 const start = gulp.series(build, serve);
 
+=======
+const start = gulp.series(build, serve);
+>>>>>>> main
 export {
   clean,
   copy,
@@ -191,4 +242,8 @@ export {
   build,
   serve,
   start
+<<<<<<< HEAD
 }; 
+=======
+};
+>>>>>>> main

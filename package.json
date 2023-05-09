@@ -1,12 +1,23 @@
 {
+<<<<<<< HEAD
     "name": "DigitalAcademyCourse",
     "version": "1.0.0",
     "description": "DigitalAcademyCourse",
     "author": "DyukinaYulia",
+=======
+    "name": "mywebsite",
+    "version": "1.0.0",
+    "description": "site frontend junior by kolpakova ksenia",
+    "author": "kolpakovaksenia16@gmail.com",
+>>>>>>> main
     "devDependencies": {
         "autoprefixer": "^10.4.2",
         "browser-sync": "^2.27.7",
         "del": "^6.0.0",
+<<<<<<< HEAD
+=======
+        "gulp": "^4.0.2",
+>>>>>>> main
         "gulp-csso": "^4.0.1",
         "gulp-file-include": "^2.3.0",
         "gulp-format-html": "^1.2.5",
@@ -28,8 +39,11 @@
         "build": "gulp build",
         "serve": "gulp serve",
         "start": "gulp start"
+<<<<<<< HEAD
     },
     "dependencies": {
         "gulp": "^4.0.2"
+=======
+>>>>>>> main
     }
 }
